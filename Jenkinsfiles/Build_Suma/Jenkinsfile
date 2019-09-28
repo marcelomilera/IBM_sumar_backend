@@ -1,0 +1,15 @@
+node {
+    stage('Clean workspace'){
+        deleteDir()
+    }
+    
+    stage('Checkout'){
+        sh "git clone https://github.com/marcelomilera/IBM_sumar_backend.git"
+    }
+    
+    stage('Build'){
+        dir('IBM_sumar_backend'){
+            sh "mvn clean package"
+        }
+    }
+}
