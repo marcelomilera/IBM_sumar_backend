@@ -4,12 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Suma {
 	
 	@Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+	@SequenceGenerator(name="suma_id_seq",sequenceName="suma_id_seq")
+	@GeneratedValue(strategy= GenerationType.IDENTITY, generator="suma_id_seq")
 	private long id;
 	private final int sumando01;
 	private final int sumando02;
