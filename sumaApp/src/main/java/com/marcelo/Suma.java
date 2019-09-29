@@ -10,7 +10,7 @@ import javax.persistence.SequenceGenerator;
 public class Suma {
 	
 	@Id
-	@SequenceGenerator(name="suma_id_seq",sequenceName="suma_id_seq", initialValue=1, allocationSize=12)
+	@SequenceGenerator(name="suma_id_seq",sequenceName="suma_id_seq")
 	@GeneratedValue(strategy= GenerationType.IDENTITY, generator="suma_id_seq")
 	private long id;
 	private final int sumando01;
