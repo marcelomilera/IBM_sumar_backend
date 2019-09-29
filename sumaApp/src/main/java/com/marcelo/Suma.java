@@ -10,8 +10,8 @@ import javax.persistence.SequenceGenerator;
 public class Suma {
 	
 	@Id
-	@SequenceGenerator(name="seq-gen",sequenceName="MY_SEQ_GEN", initialValue=1, allocationSize=12)
-	@GeneratedValue(strategy= GenerationType.IDENTITY, generator="seq-gen")
+	@SequenceGenerator(name="suma_id_seq",sequenceName="suma_id_seq", initialValue=1, allocationSize=12)
+	@GeneratedValue(strategy= GenerationType.IDENTITY, generator="suma_id_seq")
 	private long id;
 	private final int sumando01;
 	private final int sumando02;

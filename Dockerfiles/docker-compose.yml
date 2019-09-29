@@ -5,6 +5,7 @@ services:
     network_mode: bridge
     container_name: postgres
     volumes:
+      - ./PostgreSQL/init.sql:/docker-entrypoint-initdb.d/init.sql
       - postgres-data:/var/lib/postgresql/data
     expose:
     - 5432
